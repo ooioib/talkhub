@@ -18,16 +18,15 @@ public class JoinProceedServlet extends HttpServlet {
         String nickname = req.getParameter("nickname");
         String gender = req.getParameter("gender");
         int birth = Integer.parseInt(req.getParameter("birth"));
-        // 검증절차가 필요하면 하면 되고,
 
         UserDAO userDao = new UserDAO();
         boolean r = userDao.create(id, password, nickname, gender, birth);
 
         //
-        if(r) {
+        if (r) {
             resp.sendRedirect(req.getContextPath() + "/index");
-        }else {
-            req.getRequestDispatcher("/WEB-INF/views/user/join-fail.jsp").forward(req, resp);
+        } else {
+            req.getRequestDispatcher("/WEB-INF/views/user/login-fail.jsp").forward(req, resp);
         }
     }
 }
