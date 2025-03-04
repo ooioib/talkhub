@@ -8,11 +8,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>TalkHub</title>
 </head>
 <body>
-    <h1>TalkHub</h1>
-    <p>TalkHub에 오신 것을 환영합니다!</p>
-
+<h1>TalkHub</h1>
+<p>
+    TalkHub 에 오신 것을 환영합니다!
+</p>
 </body>
 </html>
