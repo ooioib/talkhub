@@ -35,6 +35,4 @@ public class UserDAO {
 
         return result;
     } // end boolean create(String id, String password, .... ) ================================================
-
-
 }
