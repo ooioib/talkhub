@@ -15,7 +15,7 @@ public class UserDAO {
         boolean result = false;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://database.ch662qumapvg.ap-northeast-2.rds.amazonaws.com:3306/talkhub",
+            Connection conn = DriverManager.getConnection("jdbc:mysql://database.cpmkaio4y6nw.ap-northeast-2.rds.amazonaws.com/talkhub",
                     "admin", "1q2w3e4r");
 
             PreparedStatement ps = conn.prepareStatement("insert into users values(?, ?, ?, ?, ?, now())");
