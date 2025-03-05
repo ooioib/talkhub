@@ -22,11 +22,11 @@ public class LoginProceedServlet extends HttpServlet {
         UserDAO userDAO = new UserDAO();
         User found = userDAO.findById(id);
 
-        if (found == null) {  // id에 해당하는 정보가 없다.
+        if (found == null) {  // id에 해당하는 정보가 없으면
             req.getRequestDispatcher("/WEB-INF/views/user/login-fail.jsp").forward(req, resp);
 
         } else {
-            if (found.getPassword().equals(password)) {   // 인증성공
+            if (found.getPassword().equals(password)) {   // 있으면 인증성공
                 resp.sendRedirect(req.getContextPath() + "/index");
 
             } else {   // 인증 실패
