@@ -11,6 +11,5 @@ public class ConnectionFactory {
                 "admin", "1q2w3e4r");
 
         return conn;
-
     }
 }

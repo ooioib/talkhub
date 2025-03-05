@@ -22,7 +22,6 @@ public class JoinProceedServlet extends HttpServlet {
         UserDAO userDao = new UserDAO();
         boolean r = userDao.create(id, password, nickname, gender, birth);
 
-        //
         if (r) {
             resp.sendRedirect(req.getContextPath() + "/index");
         } else {
