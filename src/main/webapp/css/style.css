@@ -1,12 +1,14 @@
 
 .color-primary {
-    color: #444444
+    color : #444444
 }
 
-/*  */
+.underline {
+    text-decoration: underline;
+}
 
-.color-primary {
-    color: red;
+/*    */
+.warning-text {
+    color : red;
     font-size: small;
 }
-

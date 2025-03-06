@@ -17,7 +17,6 @@ public class HomeServlet extends HttpServlet {
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         /*
-
         HttpSession session = req.getSession();
 
         String sid = session.getId();
@@ -36,7 +35,6 @@ public class HomeServlet extends HttpServlet {
         // session 저장 : setAttribute(String key, object value);
         // session 값 확인 : getAttribute(String key);
         // session 값 삭제 : removeAttribute(String key);
-
          */
 
         HttpSession session = req.getSession();
