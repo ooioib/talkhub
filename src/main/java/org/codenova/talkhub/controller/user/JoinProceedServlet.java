@@ -40,11 +40,11 @@ public class JoinProceedServlet extends HttpServlet {
 
         UserDAO userDao = new UserDAO();
         User found = userDao.findById(id);
+
         if (found != null) {
             hasError = true;
             req.setAttribute("idDuplicatedError", "해당 아이디는 이미 사용중입니다.");
         }
-
 
         if (hasError) {
             req.getRequestDispatcher("/WEB-INF/views/user/join-fail.jsp").forward(req, resp);

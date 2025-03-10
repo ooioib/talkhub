@@ -1,8 +1,9 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: USER
-  Date: 25. 3. 4.
-  Time: 오후 6:05
+  Date: 25. 3. 7.
+  Time: 오전 9:10
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -26,28 +27,21 @@
     <title>TalkHub</title>
 </head>
 <body>
+
 <h1>TalkHub</h1>
-<h3>TalkHub에 로그인하기</h3>
-<p>지금 로그인하고, 다양한 주제에 대해 자유롭게 이야기하세요.</p>
-<form action="${pageContext.request.contextPath}/user/login-proceed" method="post">
-    <div>
-        <label>아이디</label>
-        <div>
-            <input type="text" name="id" value="${id}"/>
-        </div>
-    </div>
-    <div>
-        <label>비밀번호</label>
-        <div>
-            <input type="password" name="password"/>
-        </div>
-    </div>
-    <p style="color:red; font-size: small">
-        ${error}
-    </p>
-    <div>
-        <button type="submit">로그인</button>
-    </div>
-</form>
+<hr/>
+<h2>TalkHub 게시판</h2>
+<ul>
+    <c:forEach var="one" items="${posts}">
+        <li style="display: flex; justify-content: space-between">
+            <div>
+                <a href="${pageContext.request.contextPath}/post/view?id=${one.id}">[${one.category}] ${one.title}</a>
+            </div>
+            <div >
+                작성자 ${one.writerId} | 작성일 ${one.writedAt} | 조회 ${one.views } | 좋아요 ${one.likes}
+            </div>
+        </li>
+    </c:forEach>
+</ul>
 </body>
 </html>

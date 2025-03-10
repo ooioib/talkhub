@@ -8,12 +8,15 @@ public class Post {
     private String category;
     private String title;
     private String content;
+
     private int views;
     private int likes;
+
     private Date writedAt;
     private Date modifiedAt;
 
-    public Post() {}
+    public Post() {
+    }
 
     public Post(int id, String writerId, String category, String title, String content, int views, int likes, Date writedAt, Date modifiedAt) {
         this.id = id;
@@ -27,30 +30,75 @@ public class Post {
         this.modifiedAt = modifiedAt;
     }
 
-    public int getId() { return id; }
-    public void setId(int id) { this.id = id; }
+    public int getId() {
+        return id;
+    }
 
-    public String getWriterId() { return writerId; }
-    public void setWriterId(String writerId) { this.writerId = writerId; }
+    public void setId(int id) {
+        this.id = id;
+    }
 
-    public String getCategory() { return category; }
-    public void setCategory(String category) { this.category = category; }
+    public String getWriterId() {
+        return writerId;
+    }
 
-    public String getTitle() { return title; }
-    public void setTitle(String title) { this.title = title; }
+    public void setWriterId(String writerId) {
+        this.writerId = writerId;
+    }
 
-    public String getContent() { return content; }
-    public void setContent(String content) { this.content = content; }
+    public String getCategory() {
+        return category;
+    }
 
-    public int getViews() { return views; }
-    public void setViews(int views) { this.views = views; }
+    public void setCategory(String category) {
+        this.category = category;
+    }
 
-    public int getLikes() { return likes; }
-    public void setLikes(int likes) { this.likes = likes; }
+    public String getTitle() {
+        return title;
+    }
 
-    public Date getWritedAt() { return writedAt; }
-    public void setWritedAt(Date writedAt) { this.writedAt = writedAt; }
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
-    public Date getModifiedAt() { return modifiedAt; }
-    public void setModifiedAt(Date modifiedAt) { this.modifiedAt = modifiedAt; }
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public int getViews() {
+        return views;
+    }
+
+    public void setViews(int views) {
+        this.views = views;
+    }
+
+    public int getLikes() {
+        return likes;
+    }
+
+    public void setLikes(int likes) {
+        this.likes = likes;
+    }
+
+    public Date getWritedAt() {
+        return writedAt;
+    }
+
+    public void setWritedAt(Date writedAt) {
+        this.writedAt = writedAt;
+    }
+
+    public Date getModifiedAt() {
+        return modifiedAt;
+    }
+
+    public void setModifiedAt(Date modifiedAt) {
+        this.modifiedAt = modifiedAt;
+    }
 }

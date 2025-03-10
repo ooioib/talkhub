@@ -1,24 +1,38 @@
 <%--
   Created by IntelliJ IDEA.
   User: USER
-  Date: 25. 3. 6.
-  Time: 오후 4:57
+  Date: 25. 3. 4.
+  Time: 오후 2:39
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>TalkHub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css"/>
+    <style>
+        /* 전체 요소를 화면 가운데 정렬 */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            margin: 0;
+        }
+    </style>
+    <title>TalkHub</title>
 </head>
 <body>
-
+<h1>TalkHub</h1>
 <div>
-    <h1>TalkHub</h1>
-    <h2>글 작성하기</h2>
-
+    <h2>토크허브에 글남기기</h2>
     <form action="${pageContext.request.contextPath}/post/write-proceed" method="post">
         <div>
-            <label>카테고리</label>
+            <label>말머리(*)</label>
             <div>
                 <select name="category">
                     <option value="자유">자유</option>
@@ -29,22 +43,26 @@
             </div>
         </div>
         <div>
-            <label>제목</label>
+            <label>제목(*)</label>
             <div>
                 <input type="text" name="title"/>
             </div>
         </div>
         <div>
-            <label>내용</label>
+            <label>내용(*)</label>
             <div>
                 <textarea name="content"></textarea>
             </div>
         </div>
-        <div >
-            <button type="submit">등록하기</button>
+
+        <div>
+            <button type="submit">지금 게시하기</button>
+            <a href="${pageContext.request.contextPath}/index">
+                <button type="button">돌아가기</button>
+            </a>
+
         </div>
     </form>
 </div>
-
 </body>
 </html>

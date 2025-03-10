@@ -10,6 +10,21 @@
 <html>
 <head>
     <title>TalkHub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css"/>
+    <style>
+        /* 전체 요소를 화면 가운데 정렬 */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            margin: 0;
+        }
+    </style>
+    <title>TalkHub</title>
 </head>
 <body>
 <h1>TalkHub</h1>
@@ -34,7 +49,7 @@
         ${error}
     </p>
     <div>
-        <button type="submit">사용자인증</button>
+        <button type="submit">로그인</button>
     </div>
 </form>
 </body>

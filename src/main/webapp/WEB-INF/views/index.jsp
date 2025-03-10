@@ -10,29 +10,43 @@
 <html>
 <head>
     <title>TalkHub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css"/>
+    <style>
+        /* 전체 요소를 화면 가운데 정렬 */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
-<h1 >TalkHub</h1>
-<p class="color-primary underline">
-    토크허브를 통해 사람들과 의견을 나누세요.
-</p>
+<h1>TalkHub</h1>
+<p>TalkHub에 오신 것을 환영합니다!</p>
+<p>토크허브를 통해 사람들과 의견을 나누세요.</p>
+
 <c:choose>
     <c:when test="${authentication}">
         <div>
-            <a href="${pageContext.request.contextPath}/user/profile">마이페이지</a>
+            <a href="${pageContext.request.contextPath}/post/write">글쓰기</a> |
+            <a href="${pageContext.request.contextPath}/post/list">글목록</a> |
+            <a href="${pageContext.request.contextPath}/user/profile">마이페이지</a> |
             <a href="${pageContext.request.contextPath}/user/logout-proceed">로그아웃</a>
         </div>
     </c:when>
     <c:otherwise>
         <div>
-            <a href="${pageContext.request.contextPath}/user/login">로그인</a>
+            <br>
+            <a href="${pageContext.request.contextPath}/user/login">로그인</a> |
             <a href="${pageContext.request.contextPath}/user/join">회원가입</a>
         </div>
     </c:otherwise>
 </c:choose>
-<p>
-    <b class="color-primary">TalkHub</b> 에 오신 것을 <span>환영</span>합니다!
-</p>
+
 </body>
 </html>
