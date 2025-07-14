@@ -18,6 +18,7 @@ public class LogoutProceedServlet extends HttpServlet {
         HttpSession session = req.getSession();
 
      // session.removeAttribute("user");  // 사용자 세션 값 넣뺐
+
         session.invalidate();  // 서버에서 파괴되어 세션이 다시 만들어짐
 
         resp.sendRedirect(req.getContextPath()+"/index");

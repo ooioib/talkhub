@@ -23,15 +23,21 @@
             text-align: center;
             margin: 0;
         }
+
+        /* 성별과 출생년도를 한 줄에 정렬 */
+        .inline-group {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
     </style>
-    <title>TalkHub</title>
 </head>
 <body>
 <h1>TalkHub</h1>
 <div>
     <h2>토크허브에 회원가입하기</h2>
-
-    <p><b>TalkHub</b>에 가입하고 자유롭게 이야기하세요! 다양한 주제에 대해 토론하고, 새로운 사람들과 소통할 수 있습니다.</p>
+    <p><b>TalkHub</b>에 가입하고 자유롭게 이야기하세요!</p>
+    <p>다양한 주제에 대해 토론하고, 새로운 사람들과 소통할 수 있습니다.</p>
 
     <form action="${pageContext.request.contextPath}/user/join-proceed" method="post">
 
@@ -68,20 +74,17 @@
             </c:if>
         </div>
 
-        <div>
-            <label>성별(*)</label>
+        <div class="inline-group">
             <div>
+                <label>성별(*)</label>
                 <select name="gender">
                     <option value="남">남</option>
                     <option value="여">여</option>
                     <option value="비공개">비공개</option>
                 </select>
             </div>
-        </div>
-
-        <div>
-            <label>출생년도(*)</label>
             <div>
+                <label>출생년도(*)</label>
                 <select name="birth">
                     <c:forEach var="i" begin="1970" end="2025">
                         <option value="${i}">${i}년</option>

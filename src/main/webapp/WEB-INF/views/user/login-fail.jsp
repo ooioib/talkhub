@@ -24,7 +24,6 @@
             margin: 0;
         }
     </style>
-    <title>TalkHub</title>
 </head>
 <body>
 <h1>TalkHub</h1>

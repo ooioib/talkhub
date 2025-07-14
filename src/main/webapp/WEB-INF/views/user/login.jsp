@@ -23,23 +23,22 @@
             margin: 0;
         }
     </style>
-    <title>TalkHub</title>
 </head>
 <body>
 <h1>TalkHub</h1>
 <h3>TalkHub에 로그인하기</h3>
 <p>지금 로그인하고, 다양한 주제에 대해 자유롭게 이야기하세요.</p>
+<br>
 <form action="${pageContext.request.contextPath}/user/login-proceed" method="post">
     <div>
-        <label>아이디</label>
         <div>
-            <input type="text" name="id" value="${id}"/>
+            <input type="text" id="id" name="id" value="${id}" placeholder="아이디"/>
         </div>
     </div>
+    <br>
     <div>
-        <label>비밀번호</label>
         <div>
-            <input type="password" name="password"/>
+            <input type="password" id="password" name="password" placeholder="비밀번호"/>
         </div>
     </div>
     <p style="color:red; font-size: small">

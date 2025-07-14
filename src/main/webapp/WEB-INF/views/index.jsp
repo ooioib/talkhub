@@ -13,7 +13,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css"/>
     <style>
-        /* 전체 요소를 화면 가운데 정렬 */
         body {
             display: flex;
             flex-direction: column;
@@ -27,8 +26,7 @@
 </head>
 <body>
 <h1>TalkHub</h1>
-<p>TalkHub에 오신 것을 환영합니다!</p>
-<p>토크허브를 통해 사람들과 의견을 나누세요.</p>
+<p>TalkHub에 오신 것을 환영합니다!<br>토크허브를 통해 사람들과 의견을 나누세요.</p>
 
 <c:choose>
     <c:when test="${authentication}">

@@ -52,7 +52,5 @@ public class LoginProceedServlet extends HttpServlet {
                 req.getRequestDispatcher("/WEB-INF/views/user/login-fail.jsp").forward(req, resp);
             }
         }
-
-
     }
 }
